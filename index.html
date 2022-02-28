@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>US Travel Tracker</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- css -->
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+<div id="app">
+    <v-app>
+
+        <!-- Header -->
+        <navigation-bar title="Workout Tracker" sub-header="My Workout List"> </navigation-bar>
+
+
+        <!-- Content Container -->
+        <v-container class="grey lighten-5" id="pageContentContainer">
+            <v-row>
+                <v-col id="colWithVerticalLine">
+
+                    <template>
+                        <v-tabs>
+
+                            <v-tab  href="#upperBodyWorkoutForm">Add Upper Body Workout</v-tab>
+                            <v-tab-item value="upperBodyWorkoutForm">
+                                <!-- Input upper body workout Form -->
+                                <div class="add-upper-body-workout-form">
+                                    <add-upper-body-workout-form
+                                            :item="item"
+                                            @add-item="addItem"
+                                    ></add-upper-body-workout-form>
+                                </div>
+                            </v-tab-item>
+
+
+                            <v-tab href="#lowerBodyWorkoutForm">Add Lower Body Workout</v-tab>
+                            <v-tab-item value="lowerBodyWorkoutForm">
+                                <!-- Input lower body workout Form -->
+                                <div class="add-lower-body-workout-form">
+                                    <add-lower-body-workout-form
+                                            :item="item"
+                                            @add-item="addItem"
+                                    ></add-lower-body-workout-form>
+                                </div>
+                            </v-tab-item>
+
+
+                            <v-tab href="#cardioWorkoutForm">Add Cardio Workout</v-tab>
+                            <v-tab-item value="cardioWorkoutForm">
+                                <!-- Input State Form -->
+                                <div class="add-cardio-workout-form">
+                                    <add-cardio-workout-form
+                                            :item="item"
+                                            @add-item="addItem"
+                                    ></add-cardio-workout-form>
+                                </div>
+                            </v-tab-item>
+
+
+                        </v-tabs>
+                    </template>
+
+                </v-col>
+
+                <v-col>
+
+                    <!-- Array of Items -->
+                    <div class="workout-list">
+                        <item-list :item-list="ItemList" @remove-item="removeItem"></item-list>
+                    </div>
+
+                </v-col>
+            </v-row>
+        </v-container>
+
+
+        <!-- Footer-->
+        <custom-footer footer-text="Workout Tracker"></custom-footer>
+
+
+    </v-app>
+</div>
+
+<!-- ------------------------------------------------ -->
+
+<!-- Vue Application -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+<script src="js/app-model.js"></script>
+
+<script src="js/components/form-components/addUpperBodyWorkout.js"></script>
+<script src="js/components/form-components/addLowerBodyWorkout.js"></script>
+<script src="js/components/form-components/addCardioWorkout.js"></script>
+
+<script src="js/components/item-components/upperBodyItemComponent.js"></script>
+<script src="js/components/item-components/lowerBodyItemComponent.js"></script>
+<script src="js/components/item-components/cardioItemComponent.js"></script>
+
+<script src="js/components/footer.js"></script>
+<script src="js/components/itemList.js"></script>
+<script src="js/components/listItem.js"></script>
+<script src="js/components/navigationBar.js"></script>
+<script src="js/components/Button.js"></script>
+
+
+
+<script src="js/app.js"></script>
+
+</body>
