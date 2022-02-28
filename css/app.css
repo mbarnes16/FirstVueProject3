@@ -15,14 +15,6 @@
     padding-left: 10px;
 }
 
-#favoriteState:hover {
-    opacity: 0.3;
-}
-
-#removeState:hover {
-    opacity: 0.3;
-}
-
 #isFavSpan {
     display: block;
 }
