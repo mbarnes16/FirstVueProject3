@@ -30,7 +30,7 @@ const WorkoutComponent = Vue.component('Workout', {
 
 
             <v-icon v-if="item.wasGood" color="green">mdi-emoticon-happy-outline</v-icon>
-            <v-icon v-else-if="item.wasGood === false" color="purple">mdi-emoticon-sad-outline</v-icon>
+            <v-icon v-else-if="item.wasGood === false" color="red">mdi-emoticon-sad-outline</v-icon>
 
 
             |

@@ -1,10 +1,10 @@
 Vue.component('AddLowerBodyWorkoutForm', {
 
     props: {
-        item: {
-            type: Object,
-            required: true,
-        },
+
+    },
+    data(){
+        return {item: new LowerBody()}
     },
 
 

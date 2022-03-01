@@ -1,10 +1,10 @@
 Vue.component('AddUpperBodyWorkoutForm', {
 
     props: {
-        item: {
-            type: Object,
-            required: true,
-        },
+
+    },
+    data(){
+        return {item: new UpperBody()}
     },
 
 

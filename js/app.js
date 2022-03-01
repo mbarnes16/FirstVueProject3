@@ -18,17 +18,12 @@ const app = new Vue({
             .addItem(new LowerBody('Lower Body', 'Lunges','stepping and bending your front and back leg', '02/28/2022', 10))
             .addItem(new CardioWorkout('Cardio','Treadmill','Walking on treadmill','02/28/2-22', 10)),
 
-        item: new UpperBody,
 
     },
 
     methods: {
-        addItem() {
-            this.ItemList.addItem(this.item);
-
-
-
-            this.item = new UpperBody;
+        addItem(newItem) {
+            this.ItemList.addItem(newItem);
 
         },
 

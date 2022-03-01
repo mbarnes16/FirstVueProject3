@@ -17,7 +17,7 @@ function ListItem(item){
 
 }
 function UpperBody(type, name, description, date, totalTime, wasGood){
-    this.type = type || "UpperBody";
+    this.type = type || "Upper Body";
     this.name = name;
     this.description = description;
     this.date = date;
@@ -25,7 +25,7 @@ function UpperBody(type, name, description, date, totalTime, wasGood){
     this.wasGood = wasGood;
 }
 function LowerBody(type, name, description, date, totalTime, wasGood){
-    this.type = type || "LowerBody";
+    this.type = type || "Lower Body";
     this.name = name;
     this.description = description;
     this.date = date;
@@ -33,7 +33,7 @@ function LowerBody(type, name, description, date, totalTime, wasGood){
     this.wasGood = wasGood;
 }
 function CardioWorkout(type, name, description, date, totalTime, wasGood){
-    this.type = type || "CardioWorkout";
+    this.type = type || "Cardio Workout";
     this.name = name;
     this.description = description;
     this.date = date;
@@ -41,7 +41,7 @@ function CardioWorkout(type, name, description, date, totalTime, wasGood){
     this.wasGood = wasGood;
 }
 function Workout(type, name, description, date, totalTime, wasGood) {
-    this.type = type || "Workout" || "LowerBody" || "UpperBody" || "CardioWorkout";
+    this.type = type;
     this.name = name;
     this.description = description;
     this.date = date;

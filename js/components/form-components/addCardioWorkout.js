@@ -1,10 +1,10 @@
 Vue.component('AddCardioWorkoutForm', {
 
     props: {
-        item: {
-            type: Object,
-            required: true,
-        },
+
+    },
+    data(){
+        return {item: new CardioWorkout()}
     },
 
 
@@ -55,7 +55,7 @@ Vue.component('AddCardioWorkoutForm', {
           <v-col cols="12" sm="9">
             <v-text-field
                 label="Duration"
-                v-model="item.durration"
+                v-model="item.totalTime"
                 outlined
             ></v-text-field>
           </v-col>
