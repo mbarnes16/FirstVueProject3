@@ -8,9 +8,7 @@ Vue.component('NavigationBar', {
             type: String,
             default: 'Sub-Title',
         },
-        link: {
-
-        },
+        link: {},
     },
 
     template: `
@@ -28,7 +26,7 @@ Vue.component('NavigationBar', {
       <span class="subheading">{{ subHeader }}</span>
 
       <v-spacer></v-spacer>
-      
+
       </v-toolbar>
     `
 

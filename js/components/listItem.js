@@ -1,11 +1,11 @@
 const ListItemComponent = Vue.component('ListItem', {
 
-    props:  {
+    props: {
         item: Object
     },
 
     computed: {
-        typeOfItem(){
+        typeOfItem() {
             return this.item.constructor.name;
         }
     },
@@ -21,8 +21,8 @@ const ListItemComponent = Vue.component('ListItem', {
     template:
         `
           <div id="listItemPanel">
-            <v-expansion-panels>
-              <component :is="typeOfItem" :item="item" @delete-item="deleteItem"></component>
-            </v-expansion-panels>
+          <v-expansion-panels>
+            <component :is="typeOfItem" :item="item" @delete-item="deleteItem"></component>
+          </v-expansion-panels>
           </div>`
 });

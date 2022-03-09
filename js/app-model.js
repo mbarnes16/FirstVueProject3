@@ -41,7 +41,7 @@ function CardioWorkout(type, name, description, date, totalTime, wasGood){
     this.wasGood = wasGood;
 }
 function Workout(type, name, description, date, totalTime, wasGood) {
-    this.type = type;
+    this.type = type || "";
     this.name = name;
     this.description = description;
     this.date = date;

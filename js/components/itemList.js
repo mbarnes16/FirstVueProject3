@@ -1,4 +1,3 @@
-
 const ListComponent = Vue.component('ItemList', {
 
     props: {
@@ -14,23 +13,21 @@ const ListComponent = Vue.component('ItemList', {
     },
 
 
-    methods: {
-
-    },
+    methods: {},
 
     template: `
-            <div class="workout-list">
-                <h3>{{name}}</h3>
-                <list-item v-for="item in ItemList"
-                           :item="item"
-                           :key="item.name"
-                           @remove-item="$emit('remove-item', item)">
-                          
-                </list-item>
-                <p>
-                  <br>
-                    <small>Total Workouts Completed: {{ItemList.length}}</small>
-                </p>
-            </div>
+      <div class="workout-list">
+      <h3>{{ name }}</h3>
+      <list-item v-for="item in ItemList"
+                 :item="item"
+                 :key="item.name"
+                 @remove-item="$emit('remove-item', item)">
+
+      </list-item>
+      <p>
+        <br>
+        <small>Total Workouts Completed: {{ ItemList.length }}</small>
+      </p>
+      </div>
     `
 });
